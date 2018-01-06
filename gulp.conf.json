@@ -1,0 +1,40 @@
+{
+    "uglify": true,
+    "include": [
+        "screens/_layout/main.screen",
+        "screens/_navbar/main/left.screen",
+        "screens/_navbar/main/right.screen",
+        "screens/_container/simple.screen",
+        "screens/_container/sidebar.screen",
+        "screens/home.screen",
+        "screens/about.screen",
+        "controllers/main.controller",
+        "controllers/main/home.controller",
+        "controllers/main/about.controller",
+        "qk-alchemy/components/pager.component",
+        "qk-alchemy/components/panel/collapsable.component",
+        "qk-alchemy/components/switch.component"        
+    ],
+    "bundles": {
+        "layout": [
+            "qk-alchemy/components/layout.component",
+            "qk-alchemy/components/layout/container.component"
+        ],
+        "sidebar": [
+            "qk-alchemy/components/layout/sidebar.component",
+            "qk-alchemy/components/layout/sidebar/imagebutton.component",
+            "qk-alchemy/components/layout/sidebar/link.component",
+            "qk-alchemy/components/layout/sidebar/search.component",
+            "qk-alchemy/components/layout/sidebar/title.component"
+        ],
+        "navbar": [
+            "qk-alchemy/components/layout/navbar.component",
+            "qk-alchemy/components/layout/navbar/button.component",
+            "qk-alchemy/components/layout/navbar/dropdown.component",
+            "qk-alchemy/components/layout/navbar/dropdown/divider.component",
+            "qk-alchemy/components/layout/navbar/dropdown/header.component",
+            "qk-alchemy/components/layout/navbar/dropdown/link.component",
+            "qk-alchemy/components/layout/navbar/link.component"
+        ]
+    }
+}

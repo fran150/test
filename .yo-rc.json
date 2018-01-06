@@ -1,0 +1,12 @@
+{
+  "generator-quark": {
+    "promptValues": {
+      "description": "Prueba de Quark",
+      "version": "0.1.0",
+      "authors": "fllopez",
+      "keywords": "test,quark",
+      "license": "MIT",
+      "homepage": ""
+    }
+  }
+}
