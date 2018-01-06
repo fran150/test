@@ -48,12 +48,14 @@ if (moduleConfig.include) {
 }
 
 // Add all excluded files prefixing the module name
-if (moduleConfig.exclude) {
+/*if (moduleConfig.exclude) {
     moduleConfig.exclude = new Array();
     for (var i = 0; i < moduleConfig.exclude.length; i++) {
         config.exclude.push(moduleConfig.include[i]);
     }
-}
+}*/
+
+config.css = moduleConfig.css;
 
 // Add all included bundles prefixing the module name
 if (moduleConfig.bundles) {

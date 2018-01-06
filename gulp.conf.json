@@ -1,5 +1,5 @@
 {
-    "uglify": true,
+    "uglify": false,
     "include": [
         "screens/_layout/main.screen",
         "screens/_navbar/main/left.screen",
@@ -36,5 +36,18 @@
             "qk-alchemy/components/layout/navbar/dropdown/link.component",
             "qk-alchemy/components/layout/navbar/link.component"
         ]
+    },
+    "css": {
+        "bundles": {
+            "bootstrap": [
+                "switchery/css",
+                "bootstrap/css"
+            ],
+            "alchemy": [
+                "qk-alchemy/css/sidebar",
+                "qk-alchemy/css/navbar",
+                "qk-alchemy/css/submenu"    
+            ]            
+        }
     }
 }
