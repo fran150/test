@@ -8,6 +8,7 @@
   "public": false,
   "dependencies": {
     "chalk": "~1.1.3",
+    "clean-css": "^4.1.9",
     "css": "^2.2.1",
     "deeply": "~2.0.3",
     "del": "^2.2.2",

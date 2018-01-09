@@ -37,7 +37,7 @@ var config = {
     include: [
         'requireLib'
     ],
-    cssOutDir: './dist'
+    cssOutDir: './dist/css'
 }
 
 // Add all included files prefixing the module name
@@ -56,6 +56,14 @@ if (moduleConfig.include) {
 }*/
 
 config.css = moduleConfig.css;
+
+if (moduleConfig.uglify) {
+    if (!config.css) {
+        config.css = {};
+    }
+    
+    config.css.uglify = moduleConfig.uglify;
+}
 
 // Add all included bundles prefixing the module name
 if (moduleConfig.bundles) {

@@ -1,5 +1,5 @@
 {
-    "uglify": false,
+    "uglify": true,
     "include": [
         "screens/_layout/main.screen",
         "screens/_navbar/main/left.screen",
