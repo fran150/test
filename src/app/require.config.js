@@ -4,6 +4,7 @@ require = requireConfigure(require, {
     paths: {
         'app/config':                   'app/config',
         'app/services':                 'services',
+        'loadQuark':                    'bower_modules/require-quark/quark',
         'bootstrap/js':                 'bower_modules/bootstrap/dist/js/bootstrap.min',
         'bootstrap/css':                'bower_modules/bootstrap/dist/css/bootstrap.min',
         'switchery/css':                'bower_modules/switchery-require/dist/switchery',
