@@ -34,49 +34,7 @@ var config = {
         requireLib: 'bower_modules/requirejs/require'
     },
     insertRequire: ['app/startup'],
-    include: [
-        'requireLib'
-    ],
     cssOutDir: './dist/css'
-}
-
-// Add all included files prefixing the module name
-if (moduleConfig.include) {
-    for (var i = 0; i < moduleConfig.include.length; i++) {
-        config.include.push(moduleConfig.include[i]);
-    }
-}
-
-// Add all excluded files prefixing the module name
-/*if (moduleConfig.exclude) {
-    moduleConfig.exclude = new Array();
-    for (var i = 0; i < moduleConfig.exclude.length; i++) {
-        config.exclude.push(moduleConfig.include[i]);
-    }
-}*/
-
-config.css = moduleConfig.css;
-
-if (moduleConfig.uglify) {
-    if (!config.css) {
-        config.css = {};
-    }
-    
-    config.css.uglify = moduleConfig.uglify;
-}
-
-// Add all included bundles prefixing the module name
-if (moduleConfig.bundles) {
-    config.bundles = {};
-    for (var name in moduleConfig.bundles) {
-        // Copy bundle config to final config
-        config.bundles[name] = moduleConfig.bundles[name];
-
-        // Prefix all file paths with the bundle new name
-        for (var i = 0; i < config.bundles[name].length; i++) {
-            config.bundles[name][i] = config.bundles[name][i];
-        }
-    }
 }
 
 if (moduleConfig.externals) {
@@ -86,7 +44,9 @@ if (moduleConfig.externals) {
 }
 
 // Configure require optimizer
-var requireJsOptimizerConfig = merge(requireJsRuntimeConfig, config);
+var requireJsOptimizerConfig = merge(requireJsRuntimeConfig, merge(moduleConfig, config));
+
+requireJsOptimizerConfig.include.push("requireLib");
 
 // Discovers all AMD dependencies, concatenates together all required .js files, minifies them
 // and writes all files in ./dist.

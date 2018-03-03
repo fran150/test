@@ -1,5 +1,6 @@
 {
     "uglify": true,
+    "manifest": true,
     "include": [
         "screens/_layout/main.screen",
         "screens/_navbar/main/left.screen",
@@ -18,24 +19,39 @@
     "bundles": {
         "layout": [
             "qk-alchemy/components/layout.component",
-            "qk-alchemy/components/layout/container.component"
+            "qk-alchemy/components/layout/container.component",
+            "qk-alchemy/lib/utils"
         ],
-        "sidebar": [
-            "qk-alchemy/components/layout/sidebar.component",
-            "qk-alchemy/components/layout/sidebar/imagebutton.component",
-            "qk-alchemy/components/layout/sidebar/link.component",
-            "qk-alchemy/components/layout/sidebar/search.component",
-            "qk-alchemy/components/layout/sidebar/title.component"
-        ],
-        "navbar": [
-            "qk-alchemy/components/layout/navbar.component",
-            "qk-alchemy/components/layout/navbar/button.component",
-            "qk-alchemy/components/layout/navbar/dropdown.component",
-            "qk-alchemy/components/layout/navbar/dropdown/divider.component",
-            "qk-alchemy/components/layout/navbar/dropdown/header.component",
-            "qk-alchemy/components/layout/navbar/dropdown/link.component",
-            "qk-alchemy/components/layout/navbar/link.component"
-        ]
+        "sidebar": {
+            "include": [
+                "qk-alchemy/components/layout/sidebar.component",
+                "qk-alchemy/components/layout/sidebar/imagebutton.component",
+                "qk-alchemy/components/layout/sidebar/link.component",
+                "qk-alchemy/components/layout/sidebar/search.component",
+                "qk-alchemy/components/layout/sidebar/title.component"
+            ],
+            "exclude": [
+                "qk-alchemy/components/layout.component",
+                "qk-alchemy/components/layout/container.component",
+                "qk-alchemy/lib/utils"                    
+            ]
+        },
+        "navbar": {
+            "include": [
+                "qk-alchemy/components/layout/navbar.component",
+                "qk-alchemy/components/layout/navbar/button.component",
+                "qk-alchemy/components/layout/navbar/dropdown.component",
+                "qk-alchemy/components/layout/navbar/dropdown/divider.component",
+                "qk-alchemy/components/layout/navbar/dropdown/header.component",
+                "qk-alchemy/components/layout/navbar/dropdown/link.component",
+                "qk-alchemy/components/layout/navbar/link.component"
+            ],
+            "exclude": [
+                "qk-alchemy/components/layout.component",
+                "qk-alchemy/components/layout/container.component",
+                "qk-alchemy/lib/utils"                    
+            ]
+        }
     },
     "css": {
         "bundles": {

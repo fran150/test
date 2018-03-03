@@ -1,5 +1,5 @@
 
-require = requireConfigure(QuarkRequireConf('bower_modules', false));
+require = requireConfigure(QuarkRequireConf('bower_modules', true));
 require = requireConfigure(require, {
     paths: {
         'app/config':                   'app/config',
